@@ -1,0 +1,8 @@
+I have researched the three required retrieval rules on all Top-40 genre queries. For each of the queries, I removed rows where 
+the query contained either the same artist, of what the same track itself, and retained the top three eligible recommendations. 
+A recommendation got a hit when its genre matched the query, and a miss when otherwise. The precision is calculated by the ratio 
+of hits to misses. The raw dot product had a precision of 0.093, raw cosine of 0.191, and TF-IDF cosine of 0.210. TF-IFD cosine 
+performed the best of these baseline methods. I then tested a log-TF + sqrt(IDF) cosine model, which gave rare words more impact
+in moderation. I would recommend this model for your company's prototype, using the genre precision as a useful benchmark, not as 
+the full defacto for user listener satisfaction. 
+
